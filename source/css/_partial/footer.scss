@@ -1,0 +1,19 @@
+.app-footer {
+  height: $app-footer-height;
+  margin-top: $article-gutter;
+  padding: $gutter;
+
+  text-align: center;
+  color: $app-footer-color;
+  font-size: .9rem;
+
+  p {
+    margin: 0;
+    padding: $gutter / 5;
+    font-style: italic;
+  }
+
+  a {
+    color: $app-footer-color;
+  }
+}

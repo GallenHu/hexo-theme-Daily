@@ -1,0 +1,30 @@
+# basic
+title: Daily
+subtitle: Minimalism, simplicity and refined details
+favicon: favicon.ico
+
+# avatar: images/avatar.png
+# banner_small: images/banner-small.png
+# banner_large: images/banner-large.png
+
+# disqus
+#disqus_shortname: drakeleung
+
+# social
+social:
+  github: https://github.com/GallenHu
+  twitter: https://twitter.com/GallenHu
+  weibo: http://weibo.com/10010800
+
+# nav #
+nav:
+  home: .
+  archive: archives
+  about: about
+  rss: atom.xml
+
+# hexo-renderer-sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false

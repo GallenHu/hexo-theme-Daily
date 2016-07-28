@@ -1,0 +1,37 @@
+main.post {
+  max-width: $main-content-width;
+  margin: 0 auto;
+  padding: $gutter;
+
+  article {
+    padding-top: $article-gutter;
+    line-height: $article-line-height;
+  }
+
+  .article-entry {
+    margin-top: 5 * $gutter;
+    a {
+      color: $anchor-color;
+    }
+  }
+
+  .article-title {
+    margin: 0;
+    // font-size: 1.75rem;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: $article-gutter * 2/3;
+  }
+
+  .article-date {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $article-date-color;
+  }
+
+  .article-comment {
+    margin-top: 6 * $gutter;
+  }
+
+}

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: $root-font-size;
+}
+
+body {
+  margin: 0;
+  font-family: $font-sans;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

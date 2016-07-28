@@ -1,0 +1,13 @@
+.back-to-home {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: $gutter;
+  padding: 8px 12px;
+
+  background-color: $anchor-color;
+  color: #fff;
+  text-align: center;
+  font-size: .9rem;
+}

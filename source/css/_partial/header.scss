@@ -1,0 +1,84 @@
+.app-header {
+  text-align: center;
+
+  //
+  // banner
+  //
+  .banner {
+    position: relative;
+    overflow: hidden;
+    z-index: -1024;
+
+    background-color: #f6f6f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // http://daverupert.com/2015/12/intrinsic-placeholders-with-picture
+    .placeholder {
+      padding-bottom: 33.3%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 2s linear;
+    }
+
+    img.loaded {
+      opacity: 1;
+    }
+
+    .banner-small {
+      filter: blur(50px);
+      -webkit-filter: blur(25px);
+    }
+  }
+
+  //
+  // description
+  //
+  .description .avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    margin-top: -$avatar-size / 2;
+    border-radius: 50%;
+    border: 4px solid $avatar-border-color;
+  }
+
+  .description .title {
+    font-size: $app-title-font-size;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $app-title-color;
+
+    margin: 0;
+    padding: $gutter;
+  }
+
+  .description .subtitle {
+    margin: 0;
+    font-size: .9rem;
+    // color: #666;
+    color: $app-subtitle-color;
+    padding-bottom: $gutter;
+  }
+
+
+  //
+  // social list
+  //
+  .social-list {
+    margin: 0;
+    margin-top: $gutter;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social-list a {
+    color: $anchor-color;
+    padding: 8px 12px;
+  }
+}

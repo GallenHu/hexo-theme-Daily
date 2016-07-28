@@ -1,0 +1,26 @@
+.page {
+  max-width: $main-content-width;
+  margin: 0 auto;
+  padding: $gutter;
+  padding-top: 6 * $gutter;
+
+  line-height: $article-line-height;
+
+  h1, h2 {
+    border-bottom: 1px solid #eee;
+    margin-top: 2.5rem;
+    padding-bottom: .3rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  a {
+    color: $anchor-color;
+  }
+
+  li {
+    margin-left: $gutter;
+  }
+}

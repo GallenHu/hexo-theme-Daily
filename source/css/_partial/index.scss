@@ -1,0 +1,45 @@
+main.index {
+  max-width: $main-content-width;
+  margin: 0 auto;
+  padding: $gutter;
+
+  article {
+    // border-top: 1px solid $article-border-color;
+    margin-top: $article-gutter;
+  }
+
+  .article-entry {
+    padding: $gutter 0 2*$gutter 0;
+  }
+
+  .article-title {
+    margin: 0;
+    padding-top: $article-gutter * 2/3;
+    text-transform: capitalize;
+    // font-size: 1.75rem;
+  }
+
+  .article-date {
+    color: $article-date-color;
+  }
+
+  .page-nav {
+    text-align: center;
+    margin-top: $article-gutter;
+    font-size: $page-nav-font-size;
+
+    .page-number {
+      padding: $gutter / 3;
+      color: $anchor-color;
+    }
+    .current {
+      // color: $page-nav-current-page;
+      color: inherit;
+    }
+
+    .extend {
+      padding: 0 $gutter;
+      color: $anchor-color;
+    }
+  }
+}

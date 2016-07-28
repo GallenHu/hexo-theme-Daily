@@ -1,0 +1,41 @@
+.sharing {
+  margin: $gutter * 6 0;
+  padding: $gutter 0;
+
+  border-top: 1px solid $sharing-border-color;
+  border-bottom: 1px solid $sharing-border-color;
+
+  .profile .avatar {
+    padding: $gutter;
+    width: $sharing-avatar-size;
+    height: $sharing-avatar-size;
+    border-radius: 50%;
+  }
+
+  .profile .title {
+    margin: 0;
+
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  .profile .subtitle {
+    margin: 0;
+    padding: $gutter / 3 0;
+
+    font-size: .8rem;
+    font-style: italic;
+
+    color: $sharing-subtitle-color;
+  }
+
+  .share-btns > p {
+    margin: $gutter;
+    color: $sharing-statement-color;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  // .share-btns .twitter-share-button {
+  //   margin: $gutter;
+  // }
+}

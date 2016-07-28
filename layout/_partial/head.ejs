@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  <% if (page.description){ %>
+      <meta name="description" content="<%= page.description %>">
+  <% } else if (config.description){ %>
+      <meta name="description" content="<%= config.description %>">
+  <% } %>
+
+  <!--Author-->
+  <% if (config.author){ %>
+      <meta name="author" content="<%= config.author %>">
+  <% } %>
+
+  <!-- Title -->
+  <%
+  var title = [];
+  if (page.current > 1) title.push(__('page', page.current));
+  if (page.title) title.push(page.title);
+  if (page.category) title.push(page.category);
+  if (page.tag) title.push(page.tag);
+  if (page.archive) {
+      if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+      else title.push(__('archive_a'));
+  }
+  title.push(config.title);
+  %>
+  <title><%= title.join(' - ') %></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
+  
+  <!-- Custom CSS/Sass -->
+  <%- css('css/style') %>
+</head>

@@ -1,0 +1,18 @@
+.app-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: $gutter;
+
+  a {
+    color: $anchor-color;
+    text-transform: capitalize;
+    padding: 6px 10px;
+  }
+
+  .active {
+    background-color: $anchor-color;
+    color: #fff;
+  }
+}

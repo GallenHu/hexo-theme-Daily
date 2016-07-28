@@ -1,0 +1,193 @@
+// https://github.com/chriskempson/tomorrow-theme
+//Tomorrow Night Eighties
+
+$background: #2d2d2d;
+$current-line: #393939;
+$selection: #515151;
+$foreground: #ccc;
+$comment: #999;
+$red: #f2777a;
+$orange: #f99157;
+$yellow: #ffcc66;
+$green: #99cc99;
+$aqua: #66cccc;
+$blue: #6699cc;
+$purple: #cc99cc;
+
+.code-block {
+  background: $background;
+  margin: 0;
+  padding: 20px 10px  ;
+  border-style: solid;
+  // border-color: #fff;
+  border-width: 1px 0;
+  overflow: auto;
+  color: $foreground;
+  line-height: $code-block-linehight
+}
+
+.line-numbers {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.article-entry {
+  pre, code {
+    font-family: $font-mono;
+  }
+
+  // inline code
+  code {
+    background: $code-bg-color;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  // code block
+  pre {
+    @extend .code-block;
+    code {
+      background: none;
+      text-shadow: none;
+      padding: 0;
+    }
+  }
+
+  // >
+  blockquote {
+    color: $quote-color;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 2 * $gutter;
+    border-left: 4px solid $quote-border-color;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // table
+  table {
+    margin: $gutter 0;
+    border-collapse: collapse;
+
+    tr {
+      border-top: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 6px 13px;
+    }
+  }
+
+  .highlight {
+    @extend .code-block;
+
+    pre {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      margin: 0;
+      width: auto;
+    }
+
+    td {
+      border: none;
+      padding: 0;
+    }
+
+    // override the markdown table flavour
+    tr {
+      border: 0;
+    }
+
+    figcaption {
+      font-size: 0.85em;
+      color: $comment;
+      line-height: 1em;
+      margin-bottom: 1em;
+      a {
+        float: right;
+      }
+    }
+    .gutter pre {
+      @extend .line-numbers;
+      text-align: right;
+      padding-right: 20px;
+    }
+    .line {
+      height: $code-block-linehight;
+    }
+  }
+}
+
+pre {
+  .comment,
+  .title {
+    color: $comment;
+  }
+
+  .variable,
+  .attribute,
+  .tag,
+  .regexp,
+  .ruby .constant,
+  .xml .tag, .title,
+  .xml .pi,
+  .xml .doctype,
+  .html .doctype,
+  .css .id,
+  .css .class,
+  .css .pseudo {
+    color: $red;
+  }
+
+  .number,
+  .preprocessor,
+  .built_in,
+  .literal,
+  .params,
+  .constant {
+    color: $orange;
+  }
+
+  .class,
+  .ruby .class .title,
+  .css .rules .attribute {
+    color: $green;
+  }
+
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .ruby .symbol,
+  .xml .cdata {
+    color: $green;
+  }
+
+  .css .hexcolor {
+    color: $aqua;
+  }
+
+  .function,
+  .python .decorator,
+  .python .title,
+  .ruby .function .title,
+  .ruby .title .keyword,
+  .perl .sub,
+  .javascript .title,
+  .coffeescript .title {
+    color: $blue;
+  }
+
+  .keyword,
+  .javascript .function {
+    color: $purple;
+  }
+}

@@ -1,0 +1,43 @@
+main.archive {
+  max-width: $archive-main-width;
+  padding: 6 * $gutter $gutter 0 $gutter;
+  margin: 0 auto;
+
+  article {
+    margin-top: $archive-gutter;
+  }
+
+  .article-title {
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+
+  .article-meta {
+    padding-left: 2 * $gutter;
+
+    .article-date {
+      color: $article-date-color;
+    }
+  }
+
+  .page-nav {
+    text-align: center;
+    margin-top: 6 * $gutter;
+    font-size: $page-nav-font-size;
+
+    .page-number {
+      padding: $gutter / 3;
+      color: $anchor-color;
+    }
+    .current {
+      // color: $page-nav-current-page;
+      color: inherit;
+    }
+
+    .extend {
+      padding: 0 $gutter;
+      color: $anchor-color;
+    }
+  }
+}

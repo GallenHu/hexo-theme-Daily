@@ -1,0 +1,73 @@
+//
+// base
+//
+$bg-color: #eee;
+$main-content-width: 700px;
+$gutter: 15px;
+
+$root-font-size: 16px;
+$body-font-size: 1rem;
+
+
+//
+// header
+//
+$banner-height: 450px;
+$avatar-size: 100px;
+$app-title-font-size: 1.875rem;
+
+$avatar-border-color: #fff;
+$app-title-color: #222;
+$app-subtitle-color: #EB298C;
+
+
+//
+// archive
+//
+$archive-main-width: 500px;
+$archive-gutter: 2 * $gutter;
+$page-nav-font-size: 1.25rem;
+
+//
+// article
+//
+$article-line-height: 1.7;
+$article-date-color: #aaa;
+$article-gutter: 3 * $gutter;
+$anchor-color: #5badf0;
+
+//
+// sharing
+//
+$sharing-border-color: #ddd;
+$sharing-avatar-size: 70px;
+$sharing-subtitle-color: #999;
+$sharing-statement-color: #EB298C;
+
+//
+// footer
+//
+$app-footer-height: 80px;
+$app-footer-color: #666;
+$app-footer-bg: #abcdef;
+
+//
+//font
+//
+// 没有衬线，在屏幕上更容易识别
+$font-sans: 'Source Han Sans', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+
+// 有衬线，即是字母末尾有小细线，通常用于新闻报纸
+$font-serif: Georgia, "Times New Roman", serif;
+
+// 等宽的字符，也就是水平方向的宽度是相同的，常用于代码实例
+$font-mono: "Source Code Pro", Consolas, Monaco, Menlo, monospace;
+
+
+//
+// markdown highlight
+//
+$code-bg-color: rgba(0,0,0,0.07);;
+$quote-border-color: #aaa;
+$quote-color: #aaa;
+$code-block-linehight: 1.25 * $root-font-size
