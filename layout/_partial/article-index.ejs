@@ -1,0 +1,20 @@
+<article>
+  <% if (item.photos.length) { %>
+  <a href="">
+    <img src="<%- item.photos[0] %>" alt="<%- item.title %>">
+  </a>
+  <% } %>
+  <h1>
+  <%- item.title || theme.default_post_title || "Untitled" %>
+  </h1>
+  <div class="posted-on">
+  <%= item.date.format(config.date_format) %>
+  </div>
+  <div class="tags-links">
+    <% item.tags.each(function(tag){ %>
+    <a href="" rel="tag">
+      <%- tag.name %>
+    </a>
+    <% }); %>
+  </div>
+</article>

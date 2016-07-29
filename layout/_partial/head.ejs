@@ -4,15 +4,44 @@
 
   <!--Description-->
   <% if (page.description){ %>
-      <meta name="description" content="<%= page.description %>">
+  <meta name="description" content="<%= page.description %>">
   <% } else if (config.description){ %>
-      <meta name="description" content="<%= config.description %>">
+  <meta name="description" content="<%= config.description %>">
   <% } %>
 
   <!--Author-->
   <% if (config.author){ %>
-      <meta name="author" content="<%= config.author %>">
+  <meta name="author" content="<%= config.author %>">
   <% } %>
+
+  <!--Open Graph Title-->
+  <% if (page.title){ %>
+      <meta property="og:title" content="<%= page.title %>"/>
+  <% } else { %>
+      <meta property="og:title" content="<%= config.title %>"/>
+  <% } %>  
+  <!--Open Graph Description-->
+  <% if (page.description){ %>
+      <meta property="og:description" content="<%= page.description %>" />
+  <% } else if (config.description) { %>
+      <meta property="og:description" content="<%= config.description %>" />
+  <% } %>  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="<%= config.title %>"/>  
+  <!--Type page-->
+  <% if(page.title) { %>
+      <meta property="og:type" content="article" />
+  <% } else { %>
+      <meta property="og:type" content="website" />
+  <% } %>  
+  <!--Page Cover-->
+  <% if (page.share_cover) { %>
+      <meta property="og:image" content="<%= config.url %><%= page.share_cover %>" />
+  <% } else if (config.cover) { %>
+      <meta property="og:image" content="<%= config.url %><%= config.cover %>"/>
+  <% } %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Title -->
   <%
@@ -29,7 +58,7 @@
   %>
   <title><%= title.join(' - ') %></title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
   <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
   
   <!-- Custom CSS/Sass -->

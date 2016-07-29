@@ -18,7 +18,7 @@ social:
 
 # nav #
 nav:
-  home: .
+  home: /
   archive: archives
   about: about
   rss: atom.xml
@@ -28,3 +28,6 @@ node_sass:
   outputStyle: nested
   precision: 5
   sourceComments: false
+
+# Default post title
+default_post_title: Untitled
