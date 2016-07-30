@@ -1,20 +1,29 @@
-<!-- Navigation -->
-<nav class="navbar">
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse">
-    <ul class="navbar-nav">
-      <% for (var i in theme.nav){ %>
-        <li>
-          <a href="<%- theme.nav[i].url ? url_for(theme.nav[i].url) : url_for(theme.nav[i]) %>">
-            <% if (theme.nav[i].icon) { %>
-              <i class="fa fa-<%= theme.nav[i].icon %> fa-stack-2x"></i>
-            <% } else { %>
-              <%= i %>
-            <% } %>
-          </a>
-        </li>
-      <% } %>
-    </ul>
+<header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="" rel="home">
+        <img src="http://dummyimage.com/150x60/000/fff" alt="">
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          <% for (var i in theme.nav){ %>
+            <li>
+              <a href="<%- theme.nav[i].url ? url_for(theme.nav[i].url) : url_for(theme.nav[i]) %>">
+                <% if (theme.nav[i].icon) { %>
+                  <i class="fa fa-<%= theme.nav[i].icon %> fa-stack-2x"></i>
+                <% } else { %>
+                  <%= i %>
+                <% } %>
+              </a>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
   </div>
-  <!-- /.navbar-collapse -->
-</nav>
+</header>

@@ -1,20 +1,32 @@
-<article>
-  <% if (item.photos.length) { %>
-  <a href="">
-    <img src="<%- item.photos[0] %>" alt="<%- item.title %>">
-  </a>
-  <% } %>
-  <h1>
-  <%- item.title || theme.default_post_title || "Untitled" %>
-  </h1>
-  <div class="posted-on">
-  <%= item.date.format(config.date_format) %>
-  </div>
-  <div class="tags-links">
-    <% item.tags.each(function(tag){ %>
-    <a href="" rel="tag">
-      <%- tag.name %>
+<div class="container">
+  <article class="post">
+    <% if (item.photos.length) { %>
+    <a href="">
+      <img src="<%- item.photos[0] %>" alt="<%- item.title %>" class="attachment-post-thumbnail">
     </a>
-    <% }); %>
-  </div>
-</article>
+    <% } %>
+    <h1 class="entry-title">
+      <a href="" rel="bookmark">
+        <%- item.title || theme.default_post_title || "Untitled" %>  
+      </a>
+    </h1>
+    <% if (item.excerpt){ %>
+    <div class="entry-content">
+      <p>
+        <%- item.excerpt %>
+      </p>
+    </div>
+    <% } %>
+    
+    <p class="posted-on">
+    <%= item.date.format(config.date_format) %>
+    </p>
+    <div class="tags-links">
+      <% item.tags.each(function(tag){ %>
+      <a href="" rel="tag">
+        <%- tag.name %>
+      </a>
+      <% }); %>
+    </div>
+  </article>
+</div>

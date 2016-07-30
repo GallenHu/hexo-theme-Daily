@@ -1,0 +1,399 @@
+html,body {
+	height: 100%;
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+	color: $color-text;
+	font-family: 'Open sans',sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+p {
+	margin: 0 0 1.5em 0;
+	line-height: 1.5;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+
+
+/*--------------------------------------------------------------
+ Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0;
+}
+ul {
+	list-style: none;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 1.250em;
+}
+h2 {
+	font-size: 1.125em;
+}
+h3 {
+	font-size: 1em;
+}
+h4 {
+	font-size: 0.875em;
+}
+
+blockquote p {
+	font-size: 1.250em;
+	border-top: 1px solid $grey-border;
+	border-bottom: 1px solid $grey-border;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	opacity: 0.95;
+
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+
+/*--------------------------------------------------------------
+Links
+--------------------------------------------------------------*/
+a {
+	color: $color-text;
+	text-decoration: none;
+}
+a:visited {
+	color: $color-text;
+}
+a:hover,
+a:focus,
+a:active {
+	color: $color-text;
+	opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+Grad
+--------------------------------------------------------------*/
+.row {
+	    width: 100%;
+    display: block;
+		&:after {
+			    content: "";
+    display: table;
+    clear: both;
+		}
+}
+@for $i from 1 through 10 {
+  .col-1-#{$i} { 
+		width: 100% / $i;
+		float: left;
+		padding: 0 15px; 
+		box-sizing: border-box;
+	}
+}
+
+/*--------------------------------------------------------------
+Content
+--------------------------------------------------------------*/
+.content-area {
+	padding-top: $header-height;
+}
+.page .content-area,
+.error404 .content-area {
+	padding-top: 120px;
+}
+.odd {
+	background: #f5f5f5;
+	position: relative;
+}
+.even {
+	background: white;
+	position: relative;
+}
+.container {
+	    max-width: $container-width;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.inside-wrapper {
+		max-width: $inside-wrapper-width;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+.post {
+	  padding-top: 70px;
+    padding-bottom: 70px;
+}
+.attachment-post-thumbnail {
+	    margin: 0 auto 35px;
+    transition: opacity 0.7s;
+    display: block;
+		&:hover {
+			    opacity: 0.7;
+		}
+}
+.entry-title {
+	    font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
+    letter-spacing: 0.2em;
+    color: #000;
+    text-align: center;
+    margin-bottom: 27px;
+    font-weight: 700;
+    font-size: 1.25em;
+		a {
+			    color: #000;
+			font-weight: 700;
+			text-decoration: none;
+		}
+		&:after {
+			content: "";
+			height: 2px;
+			width: 50px;
+			background: black;
+			display: block;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+}
+.home .entry-content {
+		padding: 0 100px;
+    margin: 1.5em 0;
+		p {
+			text-align: center;
+		}
+}
+.posted-on {
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
+    font-size: 0.688em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.tags-links {
+	    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
+    font-size: 0.800em;
+    font-style: normal;
+    margin-bottom: 30px;
+		a {
+			margin: 0 5px;
+			font-style: italic;
+		}
+}
+.pager {
+	padding: 1.5em 0;
+	&:after {
+		    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+	}
+	&:hover {
+		.meta-arraw {
+			opacity: 0.8;
+		}
+	}
+	.previous {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+	.next {
+		float: left;
+		width: 50%;
+	}
+	a {
+		    text-decoration: none;
+    color: #3a3a3a;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
+    font-size: 0.750em;
+	}
+}
+.meta-arraw {
+	    width: 10px;
+    height: 17px;
+    background: url("../images/arrow-left.svg") no-repeat;
+    display: inline-block;
+    margin-bottom: -4px;
+    margin-right: 5px;
+    opacity: 0.3;
+		transition: opacity 0.5s ease;
+}
+.meta-arraw-left {
+	background: url("../images/arrow-left.svg") no-repeat;
+}
+.meta-arraw-right {
+	background: url("../images/arrow-right.svg") no-repeat;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+.footer-widgets {
+	font-size: 0.750em;
+	z-index: 2;
+	position: relative;
+	background: #fff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	padding-top: 50px;
+	padding-bottom: 40px;
+	text-align: center;
+	.wrapper {
+
+	}
+}
+.widget-title {
+	    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.widget-text {
+	input[type="text"] {
+		width: 200px;
+		color: #111;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px;
+		padding: 3px;
+	}
+	input[type="submit"] {
+		    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    -webkit-appearance: button;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: .6em 1em .4em;
+	}
+}
+.icon {
+	display: inline-block;
+	width: $icon-size;
+	height: $icon-size;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-indent: -999em;
+	
+	@each $social in github, weibo, mail, twitter {
+		&.icon-#{$social} {
+			background-image: url('../images/#{$social}.svg');
+		} 
+	}
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.site-info {
+  text-align: center;
+  font-size: 0.750em;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  opacity: 0.4; }

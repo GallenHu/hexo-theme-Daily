@@ -1,0 +1,42 @@
+.site-header {
+  width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #dcdcdc;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 70px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-inside {
+      display: table;
+    height: 100%;
+    width: 100%;
+}
+.logo {
+  display: table-cell;
+  vertical-align: middle;
+}
+.navbar {
+  float: right;
+  padding-top: $nav-padding-top;
+  ul {
+    li {
+      float: left;
+      margin-left: 20px;
+      a {
+        color: $color-title;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

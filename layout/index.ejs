@@ -1,12 +1,17 @@
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-1">
-      <% page.posts.each(function(item){ %>
-        <%- partial('_partial/article-index', {item: item}) %>
-      <% }); %>
+<div class="site-content home">
+  <main class="content-area">
+    <% page.posts.each(function(item, itemIndex){ %>
+      <% if (itemIndex % 2 === 0) { %>
+        <div class="even">
+          <%- partial('_partial/article-index', {item: item}) %>
+        </div> 
+      <% } else { %>
+        <div class="odd">
+          <%- partial('_partial/article-index', {item: item}) %>
+        </div>
+      <% } %>
+    <% }); %>
 
-      <%- partial('_partial/pagination') %>
-    </div>
-  </div>
+    <%- partial('_partial/pagination') %>
+  </main>
 </div>

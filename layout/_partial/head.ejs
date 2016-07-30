@@ -46,7 +46,6 @@
   <!-- Title -->
   <%
   var title = [];
-  if (page.current > 1) title.push(__('page', page.current));
   if (page.title) title.push(page.title);
   if (page.category) title.push(page.category);
   if (page.tag) title.push(page.tag);
@@ -55,11 +54,12 @@
       else title.push(__('archive_a'));
   }
   title.push(config.title);
+  if (is_home()) title.push(config.subtitle);
   %>
   <title><%= title.join(' - ') %></title>
 
   
-  <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>">
+  <link rel="shortcut icon" href="<%- url_for(config.favicon || theme.favicon) %>">
   
   <!-- Custom CSS/Sass -->
   <%- css('css/style') %>
