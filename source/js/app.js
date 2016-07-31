@@ -1,29 +1,29 @@
-var app = (function () {
-  var loadBanner = function () {
-    var bannerSmall = document.querySelector('.banner-small')
+var appDaily = {
+  baiduSearch: function(words) {
+    var key = 'site:' + window.location.host + '%20' + words.replace(/\s/g, '%20');
+    var url = 'https://www.baidu.com/baidu?tn=baidu&ie=utf-8&word=';
 
-    // can't just listen the bannerSmall's load event
-    // but why ?
-    var img = new Image()
-    img.src = bannerSmall.src
-    img.addEventListener('load', function (e) {
-      bannerSmall.classList.add('loaded')
-    }, false)
+    window.open(url + key, '_blank');
+  },
+  googleSearch: function(words) {
+    var key = 'site:' + window.location.host + '%20' + words.replace(/\s/g, '%20');
+    var url = 'https://www.google.com/search?q=';
 
-    var bannerLarge = new Image()
-    bannerLarge.src = bannerSmall.dataset.src
-    bannerLarge.addEventListener('load', function (e) {
-      e.target.classList.add('loaded')
-    }, false)
+    window.open(url + key, '_blank');
+  },
+  submitSearch: function(search_engines) {
+    var $ipt = document.getElementById('homeSearchInput');
 
-    bannerSmall.parentNode.appendChild(bannerLarge)
+    if (search_engines === 'baidu') {
+      this.baiduSearch($ipt.value.trim());
+    } else {
+      this.googleSearch($ipt.value.trim());
+    }
+
+    return false;
   }
-
-  return {
-    loadBanner: loadBanner
-  }
-})()
+};
 
 window.addEventListener('load', function (e) {
-  app.loadBanner()
-}, false)
+  // init code
+}, false);

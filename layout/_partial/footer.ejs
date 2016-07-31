@@ -27,9 +27,9 @@
       <aside>
         <h1 class="widget-title">搜索本站</h1>
         <div class="widget-text">
-          <form action="">
+          <form onSubmit="return appDaily.submitSearch('<%- config.search_engines %>')">
             <p>
-              <input type="text" placeholder="搜索...">
+              <input type="text" placeholder="搜索..." id="homeSearchInput">
             </p>
             <input type="submit" value="搜索">
           </form>
