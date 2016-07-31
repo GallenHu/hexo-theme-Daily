@@ -1,12 +1,12 @@
 <div class="container">
   <article class="post">
     <% if (item.photos.length) { %>
-    <a href="">
+    <a href="<%- config.root %><%- item.path %>">
       <img src="<%- item.photos[0] %>" alt="<%- item.title %>" class="attachment-post-thumbnail">
     </a>
     <% } %>
     <h1 class="entry-title">
-      <a href="" rel="bookmark">
+      <a href="<%- config.root %><%- item.path %>" rel="bookmark">
         <%- item.title || theme.default_post_title || "Untitled" %>  
       </a>
     </h1>

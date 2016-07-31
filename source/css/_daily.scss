@@ -1,6 +1,26 @@
 html,body {
 	height: 100%;
 }
+/*--------------------------------------------------------------
+Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
 
 /*--------------------------------------------------------------
 Typography
@@ -16,9 +36,11 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-weight: bold;
+	margin: 0.83em 0;
 }
 p {
-	margin: 0 0 1.5em 0;
+	margin: 1em 0;
 	line-height: 1.5;
 }
 b, strong {
@@ -27,9 +49,7 @@ b, strong {
 dfn, cite, em, i {
 	font-style: italic;
 }
-blockquote {
-	margin: 0 1.5em;
-}
+
 address {
 	margin: 0 0 1.5em;
 }
@@ -135,12 +155,7 @@ h4 {
 }
 
 blockquote p {
-	font-size: 1.250em;
-	border-top: 1px solid $grey-border;
-	border-bottom: 1px solid $grey-border;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	opacity: 0.95;
+	margin: 0;
 
 }
 strong {
@@ -217,10 +232,7 @@ Content
 	margin: 0 auto;
 	padding: 0 50px;
 }
-.post {
-	  padding-top: 70px;
-    padding-bottom: 70px;
-}
+
 .attachment-post-thumbnail {
 	    margin: 0 auto 35px;
     transition: opacity 0.7s;
