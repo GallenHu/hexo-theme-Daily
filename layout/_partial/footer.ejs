@@ -4,7 +4,10 @@
     <div class="col-1-3">
       <aside>
         <h1 class="widget-title"><%= config.widget ? config.widget.title : theme.widget.title  %></h1>
-        <p align="left"><%= config.widget ? config.widget.content : (theme.widget.content || config.description) %></p>
+        <div class="custom-widget-content" align="left">
+          <% var widget_content = config.widget ? config.widget.content : (theme.widget.content || config.description) %>
+          <%- widget_content %>
+        </div>
       </aside>
     </div>
     <div class="col-1-3">

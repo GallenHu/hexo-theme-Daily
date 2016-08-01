@@ -17,7 +17,7 @@
           <div class="tags-links">
             <% if (page.tags) { %>
               <% page.tags.each(function(tag){ %>
-                <a href="" rel="tag">
+                <a href="<%= config.root %>tags/<%= tag.name %>/" rel="tag">
                   <%- tag.name %>
                 </a>
               <% }); %>

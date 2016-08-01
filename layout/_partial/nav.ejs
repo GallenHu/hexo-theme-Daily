@@ -2,7 +2,9 @@
   <div class="header-inside">
     <div class="logo">
       <a href="/" rel="home">
+        <% if (config.logo || theme.logo) { %>
         <img src="<%- config.logo || theme.logo %>" alt="">
+        <% } %>
       </a>
     </div>
     <!-- Navigation -->
@@ -10,11 +12,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse">
         <ul class="navbar-nav">
-          <% for (var i in theme.nav){ %>
+          <% var site_navs = config.nav || theme.nav  %>
+          <% for (var i in site_navs){ %>
             <li>
-              <a href="<%- theme.nav[i].url ? url_for(theme.nav[i].url) : url_for(theme.nav[i]) %>">
-                <% if (theme.nav[i].icon) { %>
-                  <i class="fa fa-<%= theme.nav[i].icon %> fa-stack-2x"></i>
+              <a href="<%- site_navs[i].url ? url_for(site_navs[i].url) : url_for(site_navs[i]) %>">
+                <% if (site_navs[i].icon) { %>
+                  <i class="fa fa-<%= site_navs[i].icon %> fa-stack-2x"></i>
                 <% } else { %>
                   <%= i %>
                 <% } %>
