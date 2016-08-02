@@ -19,21 +19,21 @@
       <meta property="og:title" content="<%= page.title %>"/>
   <% } else { %>
       <meta property="og:title" content="<%= config.title %>"/>
-  <% } %>  
+  <% } %>
   <!--Open Graph Description-->
   <% if (page.description){ %>
       <meta property="og:description" content="<%= page.description %>" />
   <% } else if (config.description) { %>
       <meta property="og:description" content="<%= config.description %>" />
-  <% } %>  
+  <% } %>
   <!--Open Graph Site Name-->
-  <meta property="og:site_name" content="<%= config.title %>"/>  
+  <meta property="og:site_name" content="<%= config.title %>"/>
   <!--Type page-->
   <% if(page.title) { %>
       <meta property="og:type" content="article" />
   <% } else { %>
       <meta property="og:type" content="website" />
-  <% } %>  
+  <% } %>
   <!--Page Cover-->
   <% if (page.share_cover) { %>
       <meta property="og:image" content="<%= config.url %><%= page.share_cover %>" />
@@ -54,13 +54,13 @@
       else title.push(__('archive_a'));
   }
   title.push(config.title);
-  if (is_home()) title.push(config.subtitle);
+  if (is_home() && config.subtitle) title.push(config.subtitle);
   %>
   <title><%= title.join(' - ') %></title>
 
-  
+
   <link rel="shortcut icon" href="<%- url_for(config.favicon || theme.favicon) %>">
-  
+
   <!-- Custom CSS/Sass -->
   <%- css('css/style') %>
 </head>

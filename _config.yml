@@ -16,8 +16,8 @@ favicon: favicon.ico
 nav:
   home: .
   archive: archives
-  about: about
-  rss: atom.xml
+  # about: about
+  # rss: atom.xml
 
 # hexo-renderer-sass
 node_sass:
@@ -26,7 +26,7 @@ node_sass:
   sourceComments: false
 
 # Default post title
-default_post_title: 随笔
+default_post_title: Untitled
 
 # social
 social:
@@ -40,4 +40,4 @@ social:
 #   content: 内容
 widget:
   title: 关于本站
-  content: 
+  content:
