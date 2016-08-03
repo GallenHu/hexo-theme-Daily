@@ -17,7 +17,7 @@ A simple theme for Hexo
 3. Run: `hexo server`
 
 ## Todo
-- [ ] mobile support
+- [x] mobile support
 - [ ] cloud tags page
 - [ ] category in menu
 

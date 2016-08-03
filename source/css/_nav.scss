@@ -12,6 +12,22 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  .button-wrap {
+    display: none;
+    float: right;
+    padding-top: $nav-padding-top;
+  }
+  .menu-toggle {
+    width: 20px;
+    height: 20px;
+    background: url("../images/menu.svg") center no-repeat;
+    text-indent: -99999px;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    opacity: 0.25;
+  }
 }
 .header-inside {
   display: table;
@@ -26,11 +42,17 @@
   float: right;
   padding-top: $nav-padding-top;
   ul {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
     li {
       float: left;
       margin-left: 20px;
       a {
-        color: $color-title;
         text-decoration: none;
         transition: opacity 0.3s ease;
         &:hover {

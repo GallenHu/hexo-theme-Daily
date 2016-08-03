@@ -247,6 +247,7 @@ Grad
 .row {
   width: 100%;
   display: block;
+  box-sizing: border-box;
   &:after {
     content: "";
     display: table;
@@ -260,6 +261,12 @@ Grad
     padding: 0 15px;
     box-sizing: border-box;
   }
+}
+/*--------------------------------------------------------------
+Common
+--------------------------------------------------------------*/
+.show-force {
+  display: block !important;
 }
 /*--------------------------------------------------------------
 Content
@@ -439,9 +446,12 @@ Footer
   }
 }
 .custom-widget-content {
+  p {
+    text-align: left;
+  }
   ul {
     list-style: disc;
-    margin-left: 50px;
+    display: inline-block;
   }
 }
 .icon {

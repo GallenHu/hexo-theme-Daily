@@ -4,7 +4,7 @@
     <div class="col-1-3">
       <aside>
         <h1 class="widget-title"><%= config.widget ? config.widget.title : theme.widget.title  %></h1>
-        <div class="custom-widget-content" align="left">
+        <div class="custom-widget-content">
           <% var widget_content = config.widget ? config.widget.content : (config.description || theme.widget.content) %>
           <%- widget_content %>
         </div>

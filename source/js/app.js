@@ -21,9 +21,17 @@ var appDaily = {
     }
 
     return false;
+  },
+  bindToggleButton: function() {
+    var $btn = $('.menu-toggle');
+    var $nav = $('.navbar');
+
+    $btn.on('click', function() {
+      $nav.toggleClass('show-force');
+    })
   }
 };
 
-window.addEventListener('load', function (e) {
-  // init code
-}, false);
+$(document).ready(function() {
+  appDaily.bindToggleButton();
+});
