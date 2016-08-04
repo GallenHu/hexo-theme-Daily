@@ -37,6 +37,13 @@
 .logo {
   display: table-cell;
   vertical-align: middle;
+  a {
+    display: inline-block;
+    img {
+      display: block;
+      height: $header-height - 10px;
+    }
+  }
 }
 .navbar {
   float: right;

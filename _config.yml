@@ -1,12 +1,12 @@
 # basic
 title: Daily
 subtitle: Minimalism, simplicity and refined details
-favicon: favicon.ico
+favicon: https://hexo.io/icon/favicon-96x96.png
 
 # avatar: images/avatar.png
 # banner_small: images/banner-small.png
 # banner_large: images/banner-large.png
-# logo: http://dummyimage.com/150x60/000/fff
+logo: https://hexo.io/logo.svg
 
 # disqus
 #disqus_shortname: drakeleung

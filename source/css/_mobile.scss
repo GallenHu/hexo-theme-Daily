@@ -2,6 +2,9 @@
 
 
 @media screen and (max-width: 767px) {
+  .site-content {
+    min-height: auto;
+  }
   .site-header {
     position: relative;
     .navbar {

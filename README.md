@@ -19,7 +19,7 @@ A simple theme for Hexo
 ## Todo
 - [x] mobile support
 - [ ] cloud tags page
-- [ ] category in menu
+- ~~category in menu~~
 
 ## Reference
 https://github.com/klugjo/hexo-theme-clean-blog  
