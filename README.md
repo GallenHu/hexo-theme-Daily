@@ -16,5 +16,8 @@ A simple theme for Hexo
 
 3. Run: `hexo server`
 
+## Compatibility
+IE9+, Mobile Fit
+
 ## Todo
 - 添加评论
