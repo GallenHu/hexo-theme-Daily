@@ -1,4 +1,5 @@
-<div class="container">
+<% if (page.prev || page.next){ %>
+<div class="container" >
   <ul class="pager">
     <% if (page.prev){ %>
       <li class="previous">
@@ -16,3 +17,4 @@
     <% } %>
   </ul>
 </div>
+<% } %>
