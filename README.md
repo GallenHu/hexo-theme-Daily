@@ -17,10 +17,4 @@ A simple theme for Hexo
 3. Run: `hexo server`
 
 ## Todo
-- [x] mobile support
-- [ ] cloud tags page
-- ~~category in menu~~
-
-## Reference
-https://github.com/klugjo/hexo-theme-clean-blog  
-https://github.com/DrakeLeung/hexo-theme-again  
+- 添加评论

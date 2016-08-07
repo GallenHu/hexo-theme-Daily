@@ -272,7 +272,7 @@ Common
 Content
 --------------------------------------------------------------*/
 .site-content {
-  min-height: calc(100% - 244px);
+  min-height: calc(100% - 274px);
 }
 .content-area {
   padding-top: $header-height;
@@ -478,5 +478,12 @@ Footer
   font-size: 0.750em;
   padding-bottom: 20px;
   padding-top: 20px;
-  opacity: 0.4;
+  color: #a2a2a2;
+  .split {
+    margin: 0 2px;
+  }
+  a {
+    text-decoration: none;
+    color: #666666;
+  }
 }
