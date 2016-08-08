@@ -1,5 +1,8 @@
 # hexo-theme-Daily
-A simple theme for Hexo
+A simple theme for Hexo. :point_right: [Demo](http://blog.hinpc.com) :point_left:
+
+## ScreenShot
+![Daily](https://i.imgur.com/BFpcrCU.jpg)
 
 ## Usage
 1. In the `root` directory:
@@ -16,8 +19,9 @@ A simple theme for Hexo
 
 3. Run: `hexo server`
 
-## Compatibility
-IE9+, Mobile Fit
+## Browser Support
+![IE9+](https://dn-hinpc.qbox.me/20160808-browser-support.png)
 
-## Todo
-- 添加评论
+## Inspired by
+WordPress theme [Daily](http://www.robertbrodziak.com/en/free-wordpress-themes/daily-theme/)  
+Any Question,Please Contact: gallenhu#foxmail.com
