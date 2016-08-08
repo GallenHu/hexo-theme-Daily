@@ -2,8 +2,14 @@
 
 
 @media screen and (max-width: 767px) {
+  .logo a img {
+    height: 36px;
+  }
   .site-content {
     min-height: auto;
+    .content-area {
+      padding-top: 0;
+    }
   }
   .site-header {
     position: relative;
@@ -16,6 +22,7 @@
       padding: 15px 0 15px 30px;
       width: 100%;
       background: #efefef;
+      background: rgba(239,239,239,0.9);
       border-bottom: 1px solid $grey-border;
       box-shadow: 0 2px 3px #dfdfdf;
       z-index: 9999;
