@@ -19,6 +19,9 @@ A simple theme for Hexo. :point_right: [Demo](http://blog.hinpc.com) :point_left
 
 3. Run: `hexo server`
 
+## Documentation
+[文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
+
 ## Browser Support
 ![IE9+](https://dn-hinpc.qbox.me/20160808-browser-support.png)
 
