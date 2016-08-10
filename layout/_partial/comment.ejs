@@ -1,0 +1,18 @@
+<% if (page.comments){ %>
+<section id="comment">
+  <!-- <h1 class="title"><%= __('comment') %></h1> -->
+
+  <% if(config.disqus_shortname) { %>
+  <div id="disqus_thread">
+    <script type="text/javascript">
+    var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = 'a unique identifier for each page where Disqus is present';
+          this.page.title = 'a unique title for each page where Disqus is present';
+      };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <% } %>
+</section>
+<% } %>
