@@ -1,275 +1,144 @@
-// https://github.com/chriskempson/tomorrow-theme
-//Tomorrow Night Eighties
-
-$background: #2d2d2d;
-$current-line: #393939;
-$selection: #515151;
-$foreground: #ccc;
-$comment: #999;
-$red: #f2777a;
-$orange: #f99157;
-$yellow: #ffcc66;
-$green: #99cc99;
-$aqua: #66cccc;
-$blue: #6699cc;
-$purple: #cc99cc;
-
-// https://github.com/DrakeLeung/hexo-theme-again/blob/master/source/css/_variables.scss
-//
-// base
-//
-$bg-color: #eee;
-$main-content-width: 700px;
-$gutter: 15px;
-
-$root-font-size: 16px;
-$body-font-size: 1rem;
-
-
-//
-// header
-//
-$banner-height: 450px;
-$avatar-size: 100px;
-$app-title-font-size: 1.875rem;
-
-$avatar-border-color: #fff;
-$app-title-color: #222;
-$app-subtitle-color: #EB298C;
-
-
-//
-// archive
-//
-$archive-main-width: 500px;
-$archive-gutter: 2 * $gutter;
-$page-nav-font-size: 1.25rem;
-
-//
-// article
-//
-$article-line-height: 1.7;
-$article-date-color: #aaa;
-$article-gutter: 3 * $gutter;
-$anchor-color: #5badf0;
-
-//
-// sharing
-//
-$sharing-border-color: #ddd;
-$sharing-avatar-size: 70px;
-$sharing-subtitle-color: #999;
-$sharing-statement-color: #EB298C;
-
-//
-// footer
-//
-$app-footer-height: 80px;
-$app-footer-color: #666;
-$app-footer-bg: #abcdef;
-
-//
-//font
-//
-// 没有衬线，在屏幕上更容易识别
-$font-sans: 'Source Han Sans', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
-
-// 有衬线，即是字母末尾有小细线，通常用于新闻报纸
-$font-serif: Georgia, "Times New Roman", serif;
-
-// 等宽的字符，也就是水平方向的宽度是相同的，常用于代码实例
-$font-mono: "Source Code Pro", Consolas, Monaco, Menlo, monospace;
-
-
-//
-// markdown highlight
-//
-$code-bg-color: rgba(0,0,0,0.07);;
-$quote-border-color: #aaa;
-$quote-color: #aaa;
-$code-block-linehight: 1.25 * $root-font-size;
-
-// ==========================================
-// base
-// ==========================================
-.code-block {
-  background: $background;
-  margin: 0;
-  padding: 20px 10px;
-  border: 1px solid;
-  overflow: auto;
-  color: $foreground;
-  line-height: $code-block-linehight;
-  font: 15px $font-mono;
+code,
+pre {
+    font-size: 0.8em;
+    background-color: #f8f8f8;
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
 }
 
-.line-numbers {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-// ==========================================
-// highlight
-// ==========================================
-.entry-content {  // Your content container
-  pre, code {
-    font-family: $font-mono;
-  }
-
-  // inline code
-  code {
-    background: $code-bg-color;
-    padding: 0 2px;
+.highlight {
+    position: relative;
+    margin: 1em 0;
     border-radius: 2px;
-  }
-
-  // code block
-  pre {
-    @extend .code-block;
-    code {
-      background: none;
-      text-shadow: none;
-      padding: 0;
+    line-height: 1.1em;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+    overflow-x: auto;
+    table, tr, td {
+        width: 100%;
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0;
     }
-  }
-
-  // >
-  blockquote {
-    color: $quote-color;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0 0 0 2 * $gutter;
-    border-left: 4px solid $quote-border-color;
-
-    p {
-      margin: 0;
+    .gutter {
+        display: none;
     }
-  }
-
-  // table
-  table {
-    width: auto;
-    margin: $gutter 0;
-    border-collapse: collapse;
-
-    tr {
-      border-top: 1px solid #ccc;
-      background-color: #fff;
+    .code pre {
+        padding: 1.2em 1.4em;
+        line-height: 1.5em;
+        margin: 0;
     }
+}
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 6px 13px;
-    }
-  }
+%code-base {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: 0.75em;
+    padding: 5px 10px 0;
+    line-height: 15px;
+    height: 15px;
+    font-weight: 600;
+}
 
-  .highlight {
-    @extend .code-block;
+@mixin code-signs($keys) {
+    @each $key in $keys {
+        .highlight.#{$key} .code:after {
+            content: to-upper-case($key);
+            @extend %code-base;
+        }
+    }
+}
 
-    pre {
-      border: none;
-      margin: 0;
-      padding: 0;
-      overflow: inherit;
-    }
+$signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
+@include code-signs($signs);
 
-    table {
-      margin: 0;
-    }
-
-    td {
-      border: none;
-      padding: 0;
-      background: $background;
-    }
-
-    // override the markdown table flavour
-    tr {
-      border: 0;
-    }
-
-    figcaption {
-      font-size: 0.85em;
-      color: $comment;
-      line-height: 1em;
-      margin-bottom: 1em;
-      a {
-        float: right;
-      }
-    }
-    .gutter pre {
-      @extend .line-numbers;
-      text-align: right;
-      padding-right: 20px;
-    }
-    .line {
-      height: $code-block-linehight;
-    }
-  }
+.highlight.cpp .code:after {
+    content: 'C++';
 }
 
 pre {
-  .comment,
-  .title {
-    color: $comment;
-  }
-
-  .variable,
-  .attribute,
-  .tag,
-  .regexp,
-  .ruby .constant,
-  .xml .tag, .title,
-  .xml .pi,
-  .xml .doctype,
-  .html .doctype,
-  .css .id,
-  .css .class,
-  .css .pseudo {
-    color: $red;
-  }
-
-  .number,
-  .preprocessor,
-  .built_in,
-  .literal,
-  .params,
-  .constant {
-    color: $orange;
-  }
-
-  .class,
-  .ruby .class .title,
-  .css .rules .attribute {
-    color: $green;
-  }
-
-  .string,
-  .value,
-  .inheritance,
-  .header,
-  .ruby .symbol,
-  .xml .cdata {
-    color: $green;
-  }
-
-  .css .hexcolor {
-    color: $aqua;
-  }
-
-  .function,
-  .python .decorator,
-  .python .title,
-  .ruby .function .title,
-  .ruby .title .keyword,
-  .perl .sub,
-  .javascript .title,
-  .coffeescript .title {
-    color: $blue;
-  }
-
-  .keyword,
-  .javascript .function {
-    color: $purple;
-  }
+    color: #525252;
+    .function .keyword,
+    .constant {
+       color: #0092db;
+    }
+    .keyword,
+    .attribute {
+        color: #e96900;
+    }
+    .number,
+    .literal {
+        color: #ae81ff;
+    }
+    .tag,
+    .tag .title,
+    .change,
+    .winutils,
+    .flow,
+    .lisp .title,
+    .clojure .built_in,
+    .nginx .title,
+    .tex .special {
+        color: #2973b7;
+    }
+    .symbol,
+    .symbol .string,
+    .value,
+    .regexp {
+        color: #42b983;
+    }
+    .title {
+        color: #83B917;
+    }
+    .tag .value,
+    .string,
+    .subst,
+    .haskell .type,
+    .preprocessor,
+    .ruby .class .parent,
+    .built_in,
+    .sql .aggregate,
+    .django .template_tag,
+    .django .variable,
+    .smalltalk .class,
+    .javadoc,
+    .django .filter .argument,
+    .smalltalk .localvars,
+    .smalltalk .array,
+    .attr_selector,
+    .pseudo,
+    .addition,
+    .stream,
+    .envvar,
+    .apache .tag,
+    .apache .cbracket,
+    .tex .command,
+    .prompt {
+        color: #42b983;
+    }
+    .comment,
+    .java .annotation,
+    .python .decorator,
+    .template_comment,
+    .pi,
+    .doctype,
+    .shebang,
+    .apache .sqbracket,
+    .tex .formula {
+        color: #b3b3b3;
+    }
+    .deletion {
+        color: #BA4545;
+    }
+    .coffeescript .javascript,
+    .javascript .xml,
+    .tex .formula,
+    .xml .javascript,
+    .xml .vbscript,
+    .xml .css,
+    .xml .cdata {
+        opacity: 0.5;
+    }
 }

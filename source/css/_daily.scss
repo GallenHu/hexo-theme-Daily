@@ -92,7 +92,7 @@ h5,
 h6 {
   clear: both;
   font-weight: bold;
-  margin: 0.83em 0;
+  margin: 1.5em 0 1em;
 }
 p {
   margin: 1em 0;
@@ -161,11 +161,14 @@ big {
 /*--------------------------------------------------------------
  Elements
 --------------------------------------------------------------*/
+a#more,
 hr {
-  background-color: #ccc;
-  border: 0;
+  display: block;
   height: 1px;
-  margin-bottom: 1.5em;
+  border: 0;
+  border-top: #d3d3d3 1px solid;
+  margin: 40px 0;
+  padding: 0;
 }
 ol,
 ul {
@@ -205,13 +208,13 @@ th {
   font-weight: bold;
 }
 h1 {
-  font-size: 1.250em;
+  font-size: 2em;
 }
 h2 {
-  font-size: 1.125em;
+  font-size: 1.5em;
 }
 h3 {
-  font-size: 1em;
+  font-size: 1.125em;
 }
 h4 {
   font-size: 0.875em;
