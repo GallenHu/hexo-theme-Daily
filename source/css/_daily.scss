@@ -207,18 +207,23 @@ table {
 th {
   font-weight: bold;
 }
+h1, h2, h3, h4 {
+  font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei"; }
 h1 {
-  font-size: 2em;
-}
+  font-size: 1.250em; }
+
+h1:hover {
+  opacity: 0.7; }
+
 h2 {
-  font-size: 1.5em;
-}
+  font-size: 1.2em;}
+
 h3 {
-  font-size: 1.125em;
-}
+  font-weight: bold;
+  font-size: 18px; }
+
 h4 {
-  font-size: 0.875em;
-}
+  font-size: 0.875em; }
 blockquote p {
   margin: 0;
 }
