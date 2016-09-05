@@ -8,6 +8,18 @@ pre {
     font-family: 'Roboto Mono', Monaco, courier, monospace;
 }
 
+code {
+  padding: 0.2em 0.4em;
+  background-color: #efefef;
+  border-radius: 3px;
+}
+
+pre {
+  .line {
+    min-height: 1em;
+  }
+}
+
 .highlight {
     position: relative;
     margin: 1em 0;
