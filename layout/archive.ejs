@@ -1,4 +1,5 @@
 <%
+// use "site.posts" to make all articles in one page. (Need not install hexo-generator-archive)
     var title = '';
     if (page.category) title = page.category;
     if (page.tag) title = "#" + page.tag;
@@ -14,11 +15,15 @@
     <h1 class="entry-title"><%- title %></h1>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <% page.posts.each(function(item){ %>
-          <%- partial('_partial/article-archive', {item: item}) %>
-            <% }); %>
+        <!-- Use lodash to classify posts. See https://lodash.com/docs#groupBy -->
+        <% var groupObj = _.groupBy(site.posts.toArray(), function(p){return -p.date.format('YYYY')}) %>
+        <% for (var year in groupObj){ %>
+          <h2 class="year"><%- -year %></h2>
+          <ul class="list">
+            <%- partial('_partial/article-archive', {posts: groupObj[year]}) %>
+          </ul>
+        <% } %>
       </div>
     </div>
   </div>
-  <%- partial('_partial/pagination') %>
 </div>

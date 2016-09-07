@@ -57,15 +57,32 @@
       visibility: hidden;
     }
     li {
+      position: relative;
       float: left;
       margin-left: 20px;
       a {
         text-decoration: none;
-        transition: opacity 0.3s ease;
+        line-height: 1.5;
         &:hover {
-          opacity: 0.5;
+          opacity: 1;
         }
       }
     }
   }
+}
+
+.navbar ul li:before {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #7e7e7e;
+  display: block;
+  -webkit-transition: width 0.25s ease;
+  transition: width 0.25s ease;
+}
+.navbar ul li:hover:before {
+  width: 100%;
 }

@@ -1,9 +1,18 @@
 .archive {
-  .date {
-    margin-right: 20px; 
+  padding-bottom: 60px;
+
+  h2.year {
+    color: #444444;
   }
-  a.title,
-  h1.post-title {
-    display: inline-block;
+
+  ul.list {
+    padding-left: 50px;
+    li {
+      padding: 10px 0;
+    }
+  }
+  .date {
+    margin-right: 30px;
+    color: #7f8c8d;
   }
 }
