@@ -16,13 +16,23 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <!-- Use lodash to classify posts. See https://lodash.com/docs#groupBy -->
-        <% var groupObj = _.groupBy(site.posts.toArray(), function(p){return -p.date.format('YYYY')}) %>
-        <% for (var year in groupObj){ %>
-          <h2 class="year"><%- -year %></h2>
+        <% 
+          var groupObj = _.groupBy(site.posts.toArray(), function(p){return p.date.format('YYYY')});
+          var groupArr = [];
+          for (var year in groupObj){
+            groupArr.push({
+              year: year,
+              posts: groupObj[year]
+            });
+          }
+        %>
+
+        <% groupArr.reverse().forEach(function(item) { %>
+          <h2 class="year"><%- item.year %></h2>
           <ul class="list">
-            <%- partial('_partial/article-archive', {posts: groupObj[year]}) %>
+            <%- partial('_partial/article-archive', {posts: item.posts}) %>
           </ul>
-        <% } %>
+        <% }) %>
       </div>
     </div>
   </div>
