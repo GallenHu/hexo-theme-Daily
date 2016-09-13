@@ -23,7 +23,7 @@ A simple theme for Hexo. :point_right: [Demo](http://blog.hinpc.com) :point_left
 [文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
 
 ## Browser Support
-![IE9+](https://dn-hinpc.qbox.me/20160808-browser-support.png)
+![IE9+](https://cdn.hinpc.com/hinpc/2016/20160913-ie9.png)
 
 ## Inspired by
 WordPress theme [Daily](http://www.robertbrodziak.com/en/free-wordpress-themes/daily-theme/)  
