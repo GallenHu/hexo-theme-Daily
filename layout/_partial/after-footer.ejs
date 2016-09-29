@@ -1,6 +1,6 @@
 <!-- scripts -->
 <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
-<script src="/js/app.js"></script>
+<%- js('js/app.js') %>
 <%if (config.disqus_shortname){ %>
 <script>
   var disqus_shortname = '<%= config.disqus_shortname %>';
