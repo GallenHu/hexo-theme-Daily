@@ -15,14 +15,19 @@
     <h1 class="entry-title"><%- title %></h1>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <!-- Use lodash to classify posts. See https://lodash.com/docs#groupBy -->
-        <% 
+        <!-- Use lodash to classify posts. See https://lodash.com/docs#groupBy
+          1. group site.posts by year
+          2. sort posts-in-one-year by Month and Day
+        -->
+        <%
           var groupObj = _.groupBy(site.posts.toArray(), function(p){return p.date.format('YYYY')});
           var groupArr = [];
           for (var year in groupObj){
+            var postsInThisYear = groupObj[year];
+            var sortedPosts = _.sortBy(postsInThisYear, function(p) { return p.date.format('MMDD') });
             groupArr.push({
               year: year,
-              posts: groupObj[year].reverse()
+              posts: sortedPosts.reverse()
             });
           }
         %>
