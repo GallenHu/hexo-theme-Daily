@@ -1,4 +1,7 @@
 # hexo-theme-Daily
+
+[![GitHub version](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily.svg)](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily)
+
 A simple theme for Hexo. :point_right: [Demo](http://blog.hinpc.com) :point_left:
 
 ## ScreenShot
