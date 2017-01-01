@@ -46,7 +46,8 @@
   <p>
     <span><%- config.title %> &copy; <%= (new Date()).getFullYear() %></span>
     <% if(config.footer !== null) { %>
-      <span class="split">|</span><span><%- config.footer || theme.footer %></span>
+      <span class="split">|</span>
+      <span><%- config.footer || theme.footer %></span>
     <% } %>
   </p>
 </footer>
