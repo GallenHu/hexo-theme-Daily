@@ -23,15 +23,19 @@ var appDaily = {
     return false;
   },
   bindToggleButton: function() {
-    var $btn = $('.menu-toggle');
-    var $nav = $('.navbar');
+    var btn = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.navbar');
 
-    $btn.on('click', function() {
-      $nav.toggleClass('show-force');
-    })
+    btn.addEventListener('click', function() {
+      var c = nav.getAttribute('class') || '';
+
+      if (c.indexOf('show-force') !== -1) {
+        nav.setAttribute('class', c.replace(/show-force/, '').trim());
+      } else {
+        nav.setAttribute('class', (c + ' show-force').trim());
+      }
+    });
   }
 };
 
-$(document).ready(function() {
-  appDaily.bindToggleButton();
-});
+appDaily.bindToggleButton();
