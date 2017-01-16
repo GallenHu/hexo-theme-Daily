@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="header-inside">
     <div class="logo">
-      <a href="/" rel="home">
+      <a href="<%= url_for() %>" rel="home">
         <% if (config.logo || theme.logo) { %>
         <img src="<%- config.logo || theme.logo %>" alt="<%- config.title %>" height="60">
         <% } %>
