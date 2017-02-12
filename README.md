@@ -5,7 +5,7 @@
 A simple theme for Hexo. :point_right: [Demo](http://blog.hinpc.com) :point_left:
 
 ## ScreenShot
-![Daily](https://static.hinpc.com/image/2016/screenshootBFpcrCU.jpg!width1k)
+![Daily](https://cdn.rawgit.com/Hinpc/static/748ad5ba/images/2016/screenshootBFpcrCU.jpg)
 
 ## Usage
 1. In the `root` directory:
