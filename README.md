@@ -2,7 +2,7 @@
 
 [![GitHub version](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily.svg)](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily)
 
-A simple theme for Hexo. :point_right: [Demo](http://blog.hinpc.com) :point_left:
+A simple theme for Hexo. :point_right: [Demo](https://hinpc.github.io/Daily/) :point_left:
 
 ## ScreenShot
 ![Daily](https://cdn.rawgit.com/Hinpc/static/748ad5ba/images/2016/screenshootBFpcrCU.jpg)
