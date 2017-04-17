@@ -2,7 +2,7 @@
   <article class="post">
     <% if (item.photos.length) { %>
     <a href="<%- config.root %><%- item.path %>">
-      <img src="<%- item.photos[0] %>" alt="<%- item.title %>" class="attachment-post-thumbnail">
+      <img src="<%- config.root %><%- item.photos[0] %>" alt="<%- item.title %>" class="attachment-post-thumbnail">
     </a>
     <% } %>
     <h1 class="entry-title">
