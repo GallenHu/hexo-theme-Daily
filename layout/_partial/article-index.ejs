@@ -1,9 +1,18 @@
+<%
+var isFullUrl = function(str) {
+  return /^(https:|http:|ftp:)?\/\//.test(str);
+};
+%>
+
 <div class="container">
   <article class="post">
     <% if (item.photos.length) { %>
-    <a href="<%- config.root %><%- item.path %>">
-      <img src="<%- config.root %><%- item.photos[0] %>" alt="<%- item.title %>" class="attachment-post-thumbnail">
-    </a>
+      <% var thumb = item.photos[0]; %>
+      <% var thumbUrl = isFullUrl(thumb) ? thumb : url_for(thumb) %>
+
+      <a href="<%- config.root %><%- item.path %>">
+          <img src="<%- thumbUrl %>" alt="<%- item.title %>" class="attachment-post-thumbnail">
+        </a>
     <% } %>
     <h1 class="entry-title">
       <a href="<%- config.root %><%- item.path %>" rel="bookmark">
@@ -17,7 +26,7 @@
       </p>
     </div>
     <% } %>
-    
+
     <p class="posted-on">
     <%= item.date.format(config.date_format) %>
     </p>
