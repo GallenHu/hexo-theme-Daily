@@ -30,15 +30,19 @@
   }
 }
 .header-inside {
-  display: table;
+  display: block;
+  position: relative;
   height: 100%;
   width: 100%;
 }
 .logo {
-  display: table-cell;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   vertical-align: middle;
   a {
-    display: inline-block;
+    display: block;
     img {
       display: block;
       height: $header-height - 10px;
