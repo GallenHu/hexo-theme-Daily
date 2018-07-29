@@ -3,7 +3,7 @@
 [![GitHub version](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily.svg)](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
 
-A simple theme for Hexo. :point_right: [Blog](https://blog.hinpc.com) or [Demo](https://hinpc.github.io/Daily/) :point_left:
+A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io/Daily/) or [国内访问](http://gallenhu.coding.me/Daily/) :point_left:
 
 ## ScreenShot
 ![Daily](https://static.hinpc.com/images/2016/screenshootBFpcrCU.jpg)
