@@ -4,6 +4,7 @@ var isFullUrl = function(str) {
 };
 %>
 
+<!-- 首页模板 -->
 <div class="container">
   <article class="post">
     <% if (item.photos.length) { %>
@@ -16,7 +17,7 @@ var isFullUrl = function(str) {
     <% } %>
     <h1 class="entry-title">
       <a href="<%- config.root %><%- item.path %>" rel="bookmark">
-        <%- item.title || theme.default_post_title || "Untitled" %>  
+        <%- item.title || theme.default_post_title || "Untitled" %>
       </a>
     </h1>
     <% if (item.excerpt){ %>

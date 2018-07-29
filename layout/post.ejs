@@ -25,7 +25,7 @@
           </div>
         </div>
         <!-- Post Main Content -->
-        <div class="entry-content">
+        <div class="entry-content <%if(config.highlight.line_number){%>has_line_number<%} %>">
           <%- page.content %>
         </div>
       </article>
