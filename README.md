@@ -6,7 +6,7 @@
 A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io/Daily/) or [国内访问](http://gallenhu.coding.me/Daily/) :point_left:
 
 ## ScreenShot
-![Daily](https://static.hinpc.com/images/2016/screenshootBFpcrCU.jpg)
+![Daily](https://png.nu/temp/1812/b84d4255c6026d15.jpg)
 
 ## Usage
 1. In the `root` directory:
@@ -27,7 +27,7 @@ A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io
 [文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
 
 ## Browser Support
-![IE9+](https://static.hinpc.com/hinpc/2016/20160913-ie9.png)
+![IE9+](https://png.nu/temp/1812/d0e40e448e677e5b.jpg)
 
 ## Inspired by
 WordPress theme [Daily](http://www.robertbrodziak.com/en/free-wordpress-themes/daily-theme/)  
