@@ -6,7 +6,7 @@
 A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io/Daily/) or [国内访问](http://gallenhu.coding.me/Daily/) :point_left:
 
 ## ScreenShot
-![Daily](https://png.nu/temp/1812/b84d4255c6026d15.jpg)
+![Daily](https://ws3.sinaimg.cn/large/005BYqpgly1fytgsnuxnuj30rs0j5js0.jpg)
 
 ## Usage
 1. In the `root` directory:
