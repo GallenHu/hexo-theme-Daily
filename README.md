@@ -27,7 +27,7 @@ A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io
 [文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
 
 ## Browser Support
-![IE9+](https://png.nu/temp/1812/d0e40e448e677e5b.jpg)
+![IE9+](https://ws3.sinaimg.cn/large/005BYqpgly1fyth2dzpgsj3070027q2t.jpg)
 
 ## Inspired by
 WordPress theme [Daily](http://www.robertbrodziak.com/en/free-wordpress-themes/daily-theme/)  
