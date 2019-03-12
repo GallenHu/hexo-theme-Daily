@@ -25,19 +25,23 @@ pre {
     margin: 1em 0;
     border-radius: 2px;
     line-height: 1.1em;
-    background-color: #f8f8f8;
-    border: 1px solid #eeeeee;
     overflow-x: auto;
     table, tr, td {
         width: 100%;
         border-collapse: collapse;
         padding: 0;
         margin: 0;
+        background-color: #f8f8f8;
+        border: 1px solid #eee;
+    }
+    table>tbody>tr {
+        &:nth-of-type(odd) { background-color: #f8f8f8; }
+        &:hover { background-color: #f8f8f8; }
     }
     .gutter {
         display: none;
         width: 1%;
-        min-width: 50px;
+        // min-width: 50px;
         padding-right: 10px;
         padding-left: 10px;
         box-sizing: border-box;

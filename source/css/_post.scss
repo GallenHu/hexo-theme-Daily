@@ -26,6 +26,38 @@
       z-index: 29;
     }
   }
+
+  table {
+    width: $table-width;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid $table-border-color;
+    font-size: $table-font-size;
+    word-wrap: break-all;
+  }
+  table>tbody>tr {
+    &:nth-of-type(odd) { background-color: $table-row-odd-bg-color; }
+    &:hover { background-color: $table-row-hover-bg-color; }
+  }
+
+  caption, th, td {
+    padding: $table-cell-padding;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: normal;
+  }
+
+  th, td {
+    border-bottom: 3px solid $table-border-color;
+    border-right: 1px solid $table-cell-border-right-color;
+  }
+
+  th {
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+
+  td { border-bottom-width: 1px; }
 }
 .entry-content {
   font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
