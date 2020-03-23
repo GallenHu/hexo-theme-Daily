@@ -1,6 +1,6 @@
 # hexo-theme-Daily
 
-[![GitHub version](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily.svg)](https://badge.fury.io/gh/GallenHu%2Fhexo-theme-Daily)
+![GitHub version](https://img.shields.io/github/v/release/gallenhu/hexo-theme-Daily?color=success)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
 
 A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io/Daily/) or [国内访问](http://gallenhu.coding.me/Daily/) :point_left:
@@ -27,7 +27,7 @@ A simple theme for Hexo. Demo: :point_right: [Demo Site](https://hinpc.github.io
 [文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
 
 ## Browser Support
-![IE9+](https://ws3.sinaimg.cn/large/005BYqpgly1fyth2dzpgsj3070027q2t.jpg)
+![IE9+](https://img.shields.io/badge/IE9+-success?style=flat&logo=internet-explorer&cacheSeconds=36000)
 
 ## Inspired by
 WordPress theme [Daily](http://www.robertbrodziak.com/en/free-wordpress-themes/daily-theme/)  
