@@ -10,6 +10,7 @@ A simple theme for Hexo(version 4.x). Demo: :point_right: [Demo Site](https://hi
 
 ## Usage
 0. (Optional) Specify Hexo version in the `root` directory
+
 ❗️ This theme maximum supported hexo version 4
     ```sh
     $ hexo version # check version
