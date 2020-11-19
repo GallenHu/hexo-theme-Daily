@@ -12,24 +12,28 @@ A simple theme for Hexo(version 4.x). Demo: :point_right: [Demo Site](https://hi
 0. (Optional) Specify Hexo version in the `root` directory
 
 ❗️ This theme maximum supported hexo version 4
-    ```sh
-    $ hexo version # check version
-    $ npm i hexo@4.2
-    ```
+
+```sh
+$ hexo version # check version
+$ npm i hexo@4.2
+```
 
 1. In the `root` directory:
-    ```sh
-    $ git clone https://github.com/GallenHu/hexo-theme-Daily.git themes/Daily
-    $ npm install --save hexo-renderer-sass
-    ```
+```sh
+$ git clone https://github.com/GallenHu/hexo-theme-Daily.git themes/Daily
+$ npm install --save hexo-renderer-sass
+```
 
 2. Change the `theme` property in the `config.yml` file.
-    ```yml
-    # theme: landscape
-    theme: Daily
-    ```
+```yml
+# theme: landscape
+theme: Daily
+```
 
-3. Run: `hexo server`
+3. Run: 
+```sh
+$ hexo server
+```
 
 ## Documentation
 [文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
