@@ -30,13 +30,13 @@ $ npm install --save hexo-renderer-sass
 theme: Daily
 ```
 
-3. Run: 
+3. Run:
 ```sh
 $ hexo server
 ```
 
 ## Documentation
-[文档](https://github.com/GallenHu/hexo-theme-Daily/wiki)
+[文档](/docs/Home.md)
 
 ## Browser Support
 ![IE9+](https://img.shields.io/badge/IE9+-success?style=flat&logo=internet-explorer&cacheSeconds=36000)
